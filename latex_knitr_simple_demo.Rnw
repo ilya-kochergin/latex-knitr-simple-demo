@@ -9,7 +9,7 @@
 \begin{document}
 
 Привет!
-Вот подсчитано в R:
+Вот выполняем код в R:
 
 <<echo=TRUE>>=
 Sys.setenv(lang="en")
@@ -41,10 +41,6 @@ g
 \end{figure}
 
 
-I'll be in touch again when the course starts.
-
-All the best,
-Jeff Leek
 
 \end{document}
 
