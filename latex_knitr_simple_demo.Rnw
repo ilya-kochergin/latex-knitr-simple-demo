@@ -11,7 +11,7 @@
 Привет!
 Вот подсчитано в R:
 
-<<echo=FALSE>>=
+<<echo=TRUE>>=
 Sys.setenv(lang="en")
 library(Cairo)
 library(ggplot2,quietly = TRUE)
