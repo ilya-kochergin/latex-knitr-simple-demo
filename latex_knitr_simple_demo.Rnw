@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{hyperref}
+\usepackage[english,russian]{babel}
+
+
+
+\begin{document}
+
+Привет!
+Вот подсчитано в R:
+
+<<echo=FALSE>>=
+Sys.setenv(lang="en")
+library(Cairo)
+library(ggplot2,quietly = TRUE)
+print(1:5)
+print((1:5)^2)
+@
+
+
+\section{Введение}
+
+Вот русский текст
+Давай вычислим выражение: \Sexpr{paste('Это число $\\pi=', pi,"$")}
+
+
+
+Возникают некоторые проблеммы если в графике мы используем русские надписи.
+
+Рецепт преодоления проблемм я нашёл на странице \url{https://www.rstats-tips.net/2015/06/using-otf-fonts-in-knitrs-latex-documents/}
+
+\begin{figure}
+<<echo=FALSE,message=FALSE,dev='cairo_pdf',warning=FALSE>>=
+ g <-    ggplot()+stat_function(aes(x=c(0,3*pi)),fun=sin)+
+labs(title="русская надпись в ggplot2!")
+g
+@
+\caption{График синуса}
+\end{figure}
+
+
+I'll be in touch again when the course starts.
+
+All the best,
+Jeff Leek
+
+\end{document}
+
+
+\end{document}
